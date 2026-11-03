@@ -3,7 +3,7 @@ import streamlit as st
 from openai import OpenAI
 from PIL import Image
 
-st.title("RX Pizzeria")
+st.title("Boyne Country Sports Shopping Assistant")
 
 # Initialize OpenAI client
 @st.cache_resource
@@ -36,7 +36,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # User input
-if prompt := st.chat_input("How can I help you today?"):
+if prompt := st.chat_input("Ask me about ski and snowboard equipment!"):
 
     st.session_state.messages.append(
         {"role": "user", "content": prompt}
